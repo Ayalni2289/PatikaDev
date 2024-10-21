@@ -2,12 +2,25 @@
 int x = Convert.ToInt32(Console.ReadLine());
 int y = Convert.ToInt32(Console.ReadLine());
 
-Odev.Tambolen(x,y);
+
+try
+{
+    Odev.Tambolen(x,y);
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Hata:" + ex.Message);
+}
+
 
 
 class Odev {
 
     public static void Tambolen(int a, int b){
+        if(a<=0 || b<=0){
+                throw new Exception("Lütfen pozitif sayı giriniz.");
+        }
+        
         int[] sayilar = new int[a];
         for(int i=0;i<a;i++){
              Console.Write("{0}. sayıyı girin: ", i + 1);
