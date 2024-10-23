@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-string s = Console.ReadLine();
+string? s = Console.ReadLine();
 string result = ProjeDeneme.timeConversion(s); 
 Console.WriteLine(result);
 class Pratikler{
